@@ -1,0 +1,61 @@
+body {
+    background-image: url("https://bing.img.run/rand.php");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed
+}
+
+.fullScreen {
+    height: 100%;
+}
+
+.fullSpace {
+    display: flex;
+    flex-grow: 1;
+}
+
+.iebox {
+    box-sizing: border-box;
+}
+
+.textInput {
+    width: 100%;
+    height: 50vmin;
+    min-height: 40vmin !important;
+    max-height: 70vmin;
+}
+
+.fileName {
+    font-size: xx-small;
+}
+
+.main {
+    margin: 0 6vmin;
+    /* border: 1px dashed; */
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255, 0.9);
+}
+
+.popup {
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    top: 15vh;
+    left: 20vw;
+    width: 60vw;
+    height: 70vh;
+}
+
+#huffmanTree {
+    top: 5vh;
+    left: 5vw;
+    width: 90vw;
+    height: 90vh;
+}
+
+#huffmanTree img {
+    object-fit: scale-down;
+    max-height: 80%;
+}
