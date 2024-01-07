@@ -5,9 +5,11 @@ $(function () {
     }
     // 转为上传文件
     $("#originalFileUpload").click(function () {
+        $("#originalFileUpload + input").val("");
         $("#originalFileUpload + input").click();
     });
     $("#cipherFileUpload").click(function () {
+        $("#cipherFileUpload + input").val("");
         $("#cipherFileUpload + input").click();
     });
 
@@ -50,7 +52,13 @@ $(function () {
                 cipher = "";
                 new Uint8Array(reader.result).forEach((value, index) => {
                     let num = parseInt(value).toString(16);
-                    cipher += num;
+
+                    // 如果少了一位,补0
+                    if (num.length == 1) {
+                        num = "0" + num;
+                    }
+
+                    cipher += num.toUpperCase();
                 });
                 $("#cipherText").val(cipher);
             });
